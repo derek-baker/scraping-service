@@ -21,7 +21,7 @@ browser = webdriver.Chrome(chrome_options=chrome_options)
 
 @app.route("/")
 def hello_world():
-    browser.get("https:google.com")
+    browser.get("https//:google.com")
     file_name = 'test.png'
     browser.save_screenshot(file_name)
     return send_file(file_name)
