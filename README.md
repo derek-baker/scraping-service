@@ -3,12 +3,12 @@
 Source: https://dev.to/googlecloud/using-headless-chrome-with-cloud-run-3fdp
 
 <hr>
-<br>
 
-## TO INSTALL DEPENDENCIES FOR LOCAL "BARE-METAL" DEVELOPMENT (I'M USING WSL)
+## TO INSTALL DEPENDENCIES FOR LOCAL "BARE-METAL" DEVELOPMENT
+### (I'M USING WSL)
     pip3 install -r requirements.txt
 
-(You'll likely need to update the version of ```chromedriver-binary``` to latest)
+(You'll likely need to manually update the version of ```chromedriver-binary``` to latest)
 <br>
 (You may need to enable long paths if you're using WSL or Windows directly.)
 <br>
@@ -28,13 +28,19 @@ Source: https://dev.to/googlecloud/using-headless-chrome-with-cloud-run-3fdp
     docker rm scraper && docker run -e PORT=8080 --publish 8081:8080 --interactive --name scraper scraper:1.0 
 
 <hr>
+<br> 
+
+NOTE: The sections below assume you've installed and configured [gcloud](https://cloud.google.com/sdk/gcloud/).
+
+<br>
 
 ## TO SUBMIT GCP BUILD:
-    gcloud builds submit --tag gcr.io/YOUR_PROJECT/web-scraping-service
+    
+    gcloud builds submit --tag gcr.io/YOUR_PROJECT/web-scraping-service    
 
 <hr>
 
-## TO DEPLOY SERVICE: 
+## TO DEPLOY SERVICE TO CLOUD RUN: 
     gcloud run deploy web-scraping-service --image gcr.io/YOUR_PROJECT/deploy web-scraping-service --region <> --platform managed
 
 <hr>
