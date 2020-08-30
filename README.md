@@ -48,6 +48,6 @@ NOTE: The sections below assume you've installed and configured [gcloud](https:/
 <br>
 
 ### NOTES FROM THE ORIGINAL AUTHOR
-- We're using --no-sandbox to ensure compatibility with the Docker container, so only point such a service towards URLs you trust.
-- Be careful when exposing such a service to user input: For example, if the URL we were screenshotting was supplied by the user, they could potentially take a screenshot of any file on the filesystem as well!
-- Be sure to create a new service account with no permission and use it as the identity of the service, for better security. See https://cloud.google.com/run/docs/securing/service-identity for an example.
+- "We're using --no-sandbox to ensure compatibility with the Docker container, so only point such a service towards URLs you trust."
+- "Be careful when exposing such a service to user input: For example, if the URL we were screenshotting was supplied by the user, they could potentially take a screenshot of any file on the filesystem as well!"
+- "Be sure to create a new service account with no permission and use it as the identity of the service, for better security. See https://cloud.google.com/run/docs/securing/service-identity for an example."
