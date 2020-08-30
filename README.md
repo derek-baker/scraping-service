@@ -42,7 +42,7 @@ NOTE: The sections below assume you've installed and configured [gcloud](https:/
 <hr>
 
 ## TO DEPLOY SERVICE TO CLOUD RUN: 
-    gcloud run deploy web-scraping-service --image gcr.io/YOUR_PROJECT/deploy web-scraping-service --region <> --platform managed
+    gcloud run deploy web-scraping-service --image gcr.io/YOUR_PROJECT/deploy web-scraping-service --region <REGION> --platform managed
 
 <hr>
 <br>
