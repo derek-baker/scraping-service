@@ -2,6 +2,7 @@
 
 from flask import Flask, send_file
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import chromedriver_binary  # Adds chromedriver binary to path
 
 app = Flask(__name__)
