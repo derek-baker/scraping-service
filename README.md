@@ -5,7 +5,7 @@ Source: https://dev.to/googlecloud/using-headless-chrome-with-cloud-run-3fdp
 <hr>
 
 ## TO INSTALL DEPENDENCIES FOR LOCAL "BARE-METAL" DEVELOPMENT
-### (I'M USING WSL)
+### (I'm using WSL)
     pip3 install -r requirements.txt
 
 (You'll likely need to manually update the version of ```chromedriver-binary``` to latest)
