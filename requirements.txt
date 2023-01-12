@@ -1,6 +1,6 @@
 # requirements.txt
 
-Flask==1.0.2
+Flask==2.0.3
 gunicorn==19.9.0
 
 # You'll probably need to update this later
@@ -9,4 +9,4 @@ selenium==3.141.0
 
 # You'll probably need to update this later
 # https://github.com/danielkaiser/python-chromedriver-binary/tags
-chromedriver-binary==v85.0.4183.87.0 
+chromedriver-binary==v109.0.5414.74.0
