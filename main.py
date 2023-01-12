@@ -3,7 +3,6 @@
 from flask import Flask, send_file
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import chromedriver_binary  # Adds chromedriver binary to path
 
 app = Flask(__name__)
@@ -22,7 +21,6 @@ browser = webdriver.Chrome(chrome_options=chrome_options)
 @app.route("/")
 def hello_world():
     browser.get("https://google.com")
-    browser.find_element(By.XPATH,"//button[@id='L2AGLb']").click()
     file_name = 'test.png'
     browser.save_screenshot(file_name)
     return send_file(file_name)
