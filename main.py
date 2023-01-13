@@ -3,21 +3,21 @@
 from flask import Flask, send_file
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import chromedriver_binary  # Adds chromedriver binary to path
 
 app = Flask(__name__)
 
 # The following options are required to make headless Chrome
 # work in a Docker container
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("disable-infobars")
-chrome_options.add_argument("window-size=1024,768")
+options = webdriver.ChromeOptions()
+options.add_argument("--no-sandbox")
+options.add_argument("--headless")
+options.add_argument("--disable-gpu")
+options.add_argument("disable-infobars")
+options.add_argument("window-size=1024,768")
 
 # Initialize a new browser
-browser = webdriver.Chrome(chrome_options=chrome_options)
+browser = webdriver.Chrome(options=options)
+
 
 @app.route("/")
 def hello_world():
